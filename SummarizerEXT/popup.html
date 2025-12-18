@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Summarizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 Page Summarizer</h1>
+    <p class="subtitle">AI-powered summaries with custom options</p>
+    
+    <div class="options-section">
+      <div class="option-group">
+        <label>📝 Summary Type:</label>
+        <select id="summary-type">
+          <option value="tl-dr">TL;DR (Quick Summary)</option>
+          <option value="key-points">Key Points</option>
+          <option value="teaser">Teaser</option>
+          <option value="headline">Headline</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label>📏 Length:</label>
+        <select id="summary-length">
+          <option value="short">Short</option>
+          <option value="medium" selected>Medium</option>
+          <option value="long">Long</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label>📄 Format:</label>
+        <select id="summary-format">
+          <option value="plain-text" selected>Plain Text</option>
+          <option value="markdown">Markdown</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label>🎯 Content Source:</label>
+        <select id="content-source">
+          <option value="full-page" selected>Full Page</option>
+          <option value="selection">Selected Text Only</option>
+          <option value="visible">Visible Content Only</option>
+          <option value="main-content">Main Content (Smart Detection)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button id="summarize-btn" class="btn-primary">✨ Generate Summary</button>
+      <button id="copy-btn" class="btn-secondary hidden">📋 Copy</button>
+      <button id="clear-btn" class="btn-secondary hidden">🗑️ Clear</button>
+    </div>
+    
+    <div id="status" class="status hidden"></div>
+    
+    <div id="summary-container" class="hidden">
+      <div class="summary-header">
+        <h2>Summary</h2>
+        <span id="word-count" class="word-count"></span>
+      </div>
+      <div id="summary-text" class="summary-box"></div>
+      
+      <div class="debug-section">
+        <details>
+          <summary>🔍 Debug Info & Source Content</summary>
+          <div id="debug-info" class="debug-box"></div>
+          <div class="debug-subsection">
+            <h4>Extracted Content Preview:</h4>
+            <div id="content-preview" class="content-preview"></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
