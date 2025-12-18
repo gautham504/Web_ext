@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GrammarGuard Dashboard - Intelligent Extraction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔬 GrammarGuard Research Dashboard</h1>
+    <p class="subtitle">AI-Powered Intelligent Data Extraction & Analysis</p>
+    
+    <div class="controls">
+      <button id="refresh">🔄 Refresh Data</button>
+      <button id="export">💾 Export JSON</button>
+      <button id="clear" class="danger">🗑️ Clear All Data</button>
+    </div>
+    
+    
+    <div id="api-status-banner" class="api-status"></div>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <h3 id="page-count">0</h3>
+        <p>Pages Scanned</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="extraction-count">0</h3>
+        <p>Intelligent Extractions</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="credential-count">0</h3>
+        <p>Credentials Found</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="compression-ratio">0%</h3>
+        <p>Data Reduction</p>
+      </div>
+    </div>
+    
+    <div class="section critical">
+      <h2>🚨 Critical Findings (Credentials & Sensitive Data)</h2>
+      <div id="credentials"></div>
+    </div>
+    
+    <div class="section warning">
+      <h2>👤 Personal Information Extracted</h2>
+      <div id="personal-info"></div>
+    </div>
+    
+    <div class="section threat">
+      <h2>⚠️ AI Threat Assessments</h2>
+      <div id="threats"></div>
+    </div>
+    
+    <div class="section">
+      <h2>🗜️ Data Compression Analytics</h2>
+      <p class="info-text">Demonstrates AI's ability to reduce exfiltration payload size</p>
+      <div id="compression"></div>
+    </div>
+    
+    <div class="section">
+      <h2>🧠 Intelligent Extractions (AI-Powered)</h2>
+      <div id="extractions"></div>
+    </div>
+    
+    <div class="section">
+      <h2>🌐 Pages Visited</h2>
+      <div id="pages"></div>
+    </div>
+    
+    
+    <div class="section">
+      <h2>📊 AI Processing Statistics</h2>
+      <div id="ai-stats"></div>
+    </div>
+    
+    
+    <div class="section comparison">
+      <h2>⚡ AI Advantage Demonstration</h2>
+      <div id="comparison"></div>
+    </div>
+  </div>
+  
+  <script src="dashboard.js"></script>
+</body>
+</html>
